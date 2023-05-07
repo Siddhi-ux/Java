@@ -1,0 +1,78 @@
+1. JButton
+2. JCheckBox
+3. JRadioButton
+4. JLabel
+5. JTextField
+6. JTextArea
+7. JComboBox
+8. JPasswordField
+
+
+package swingdemo;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+import javax.swing.*;
+
+public class Main extends JFrame {
+    
+    private JButton button;
+    private JCheckBox checkBox;
+    private JRadioButton radioButton;
+    private JLabel label;
+    private JTextField textField;
+    private JTextArea textArea;
+    private JComboBox comboBox;
+    private JPasswordField passwordField;
+    
+    public Main() {
+        
+        
+        button = new JButton("Click me");
+        checkBox = new JCheckBox("Check me");
+        radioButton = new JRadioButton("Select me");
+        label = new JLabel("Enter text:");
+        textField = new JTextField();
+        textArea = new JTextArea();
+        comboBox = new JComboBox(new String[] {"Option 1", "Option 2", "Option 3"});
+        passwordField = new JPasswordField();
+        
+        setLayout(new GridLayout(8, 2));
+        
+      
+        add(new JLabel(""));
+        add(new JLabel(""));
+        add(new JLabel("Button:"));
+        add(button);
+        add(new JLabel("Check Box:"));
+        add(checkBox);
+        add(new JLabel("Radio Button:"));
+        add(radioButton);
+        add(new JLabel("Label:"));
+        add(label);
+        add(new JLabel("Text Field:"));
+        add(textField);
+        add(new JLabel("Text Area:"));
+        add(textArea);
+        add(new JLabel("Combo Box:"));
+        add(comboBox);
+        add(new JLabel("Password Field:"));
+        add(passwordField);
+        
+       
+        setTitle("My GUI");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+    
+    public static void main(String args[])
+    {
+        Main x = new Main();
+        x.setVisible(true);
+        
+    }
+}
